@@ -42,6 +42,19 @@ CPU를 할당받아 실행하는 작업을 CPU 버스트, 입출력 작업을 �
 
 선점형 알고리즘 
 
+    RR(Round Robin) : time slice동안 작업하다가 완료되지 못하면 준비 큐 맨 뒤로 이동하여 기다림. 작업이 완료될 때까지 반복. convey effect가 줄어듬. 문맥 교환 시간을 고려하여 time slice 설정해야함. 너무 크면 FCFS와 차이가 없고 너무 작으면 성능 저하가 발생함. 되도록 적게 설정하나 문맥 교환 고려
 
+    SRT(Shortest Remaining Time) : SJF와 RR의 혼합 방식. 기본적으로 RR 스케줄링을 사용하지만, 작업 시간이 가장 적은 프로세스 선택. 남은 시간을 추가적으로 계산하는 작업 필요하고 종료 예측이 어려우며 아사 현상 발생 가능
+
+    Multilevel Queue : 준비 큐를 여러 개 사용. RR 스케줄링으로 고정형 우선순위를 사용하여 상단 큐가 모두 끝나야 다음 큐의 작업들이 시작. time slice 조절이 가능. 그러나 우선순위가 높은 프로세스때문에 낮은 프로세스의 작업이 연기됨
+
+    Multilevel Feedback Queue : Multilevel Queue 보완. 우선순위가 낮은 프로세스에 다단계 큐 스케줄링 보완. CPU 사용 후 우선순위가 낮아짐. 커널 프로세스는 일반 프로세스보다 낮아지지 않음. 우선순위가 낮을수록 time slice 증가.
+    
 비선점형 알고리즘
+
+    FCFS(First Come First Served, First In First Out) : 준비 큐에 도착한 순서대로 CPU 할당. 단순 공평하지만 처리 시간이 긴 프로세스가 CPU를 할당받으면 짧은 프로세스가 기다리는 시간이 길어져 효율성이 떨어짐(convoy effect)
+
+    SJF(Shortest Job First) : 실행 시간이 가장 짧은 작업부터 CPU 할당. 시간이 오래 걸리는 작업이 계속 연기되어 starvation 발생. 작업 시간의 정확한 예측이 힘듦
+
+    HRN(Highest Response Ratio Next) : SJF의 아사 현상 해결. 가장 짧은 작업 시간의 프로세스에게 우선권이 부여되지만 기다린 시간과 CPU 사용시간을 고려해서 스케줄링. Aging 구현 => 우선순위 = (대기시간 + CPU 사용시간)/(CPU 사용시간). 그러나 여전히 공평성이 위배됨
 
