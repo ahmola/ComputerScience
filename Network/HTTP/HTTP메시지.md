@@ -66,3 +66,32 @@ HTTP 메서드의 종류
     400-415 : 클라이언트 에러(401(Unauthorized, username과 password 필요), 404(NOT_FOUND, 리소스가 없음))
 
     500-505 : 서버 에러
+
+HTTP는 다음을 보장한다.
+
+    객체는 Content-Type과 Content-Language 헤더를 통해 올바르게 식별됨
+
+    객체는 올바르게 압축이 풀림
+
+    객체는 항상 최신
+
+    사용자 요구 만족
+
+    빠르고 효율적
+
+    조작되지 않고 온전
+
+HTTP는 컨텐츠를 라벨링하여 엔티티 형태로 보낸다.
+
+HTTP 메시지를 컨테이너라고 하면 메시지의 실질적인 화물이 엔티티가 된다.
+
+    HTTP/1.0 200 OK
+    Server : Netscape-Enterprise/3.6
+    Date : Sun, 17 Sep 2000 00:00:00 GMT
+    // 엔티티
+    Content-Type : text/plain // 엔티티 헤더
+    Content-Length : 18
+
+    Hi! // 엔티티 본문
+
+엔티티 본문은 헤더 필드의 끝을 의미하는 마지막 빈 CRLF(0x0A = <LF>)의 줄 바로 다음부터 시작한다.
