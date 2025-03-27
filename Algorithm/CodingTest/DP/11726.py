@@ -1,5 +1,4 @@
-# gpt도 틀리고 내꺼도 틀리고 인터넷도 틀리면 뭘 어쩌라는건지 모르겠다;;
-# 채점시스템과 별개로 찾아보니 맞는 것 같다.
+# 앞으로는 무조건 입력최댓값+1로 하는게 맞겠다.
 import sys
 
 def dp(n):
@@ -11,7 +10,7 @@ def dp(n):
     return memo[n]
 
 n = int(sys.stdin.readline().strip())
-memo = [0]*(n+1)
+memo = [0]*1001
 memo[1] = 1
 memo[2] = 2
 # 2*3일 때, 2*1과 2*2로 나눠서 생각할 수 있다.
