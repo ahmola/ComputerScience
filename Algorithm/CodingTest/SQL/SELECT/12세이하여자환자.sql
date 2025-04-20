@@ -1,0 +1,4 @@
+SELECT PT_NAME, PT_NO, GEND_CD, AGE, IFNULL(tlno, 'NONE') as TLNO
+FROM patient
+WHERE age <= 12 and GEND_CD="W"
+ORDER BY age DESC, pt_name ASC
