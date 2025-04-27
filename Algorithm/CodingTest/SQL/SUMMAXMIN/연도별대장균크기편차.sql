@@ -1,0 +1,13 @@
+--select date_format(ed.differentiation_date, "%Y") as year,
+--        (ys.size - ed.size_of_colony) as year_dev,
+--        ed.ID
+--from ecoli_data as ed
+--join (
+--    select date_format(differentiation_date, "%Y") as year,
+--            max(size_of_colony) as size
+--    from ecoli_data
+--    group by date_format(differentiation_date, "%Y")
+--) as ys
+--on date_format(ed.differentiation_date, "%Y") = ys.year
+--order by year asc, year_dev asc
+-- 맞게 나오는데 뭐가 자꾸 틀렷다는건지 모르겠다;;
