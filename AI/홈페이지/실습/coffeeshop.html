@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메가커피 여름메뉴</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+<body>
+  <header class="navbar">
+    <div class="logo">Coffee Shop</div>
+    <nav class="menu">
+      <a href="coffeeshop.html">홈</a>
+
+      <div class="dropdown">
+        <button class="dropbtn">메뉴</button>
+        <div class="dropdown-content">
+          <a href="#">전체 메뉴</a>
+          <a href="#">여름 한정 메뉴</a>
+          <a href="#">베스트셀러</a>
+        </div>
+      </div>
+      
+      <a href="event.html">이벤트</a>
+      <a href="map.html">매장찾기</a>
+    </nav>
+  </header>
+
+  <div class="grid" id="menu"></div>
+
+  <script>
+    const drinks = [
+      {
+        name: '꿀수박주스',
+        description: '100% 수박 착즙원액에 수박을 갈아넣어 리얼한 수박맛을 즐길 수 있는 대표메뉴',
+        imageUrl: 'https://img.79plus.co.kr/megahp/manager/upload/menu/20250430131930_1745986770248_kD6h1fFlei.jpg',
+        type: 'ICE',
+      },
+      {
+        name: '꿀수박 화채스무디',
+        description: '시원 달달한 수박스무디에 과일과 젤리펄을 넣은 여름 한정 화채 스무디',
+        imageUrl: 'https://img.79plus.co.kr/megahp/manager/upload/menu/20250430131943_1745986783490_Y2tHusplkN.jpg',
+        type: 'ICE',
+      },
+      {
+        name: '꿀복숭아 스무디',
+        description: '꿀복숭아를 가득넣어 씁쓸한 맛이 일품인 한정 스무디',
+        imageUrl: 'https://img.79plus.co.kr/megahp/manager/upload/menu/20250430131953_1745986793918_ojtAfxcJ2o.jpg',
+        type: 'ICE',
+      },
+      {
+        name: '저당 POP POP 매실 아이스티',
+        description: '매실 아이스티에 빅구슬 아이스크림을 넣어 시원한 여름메뉴',
+        imageUrl: 'https://img.79plus.co.kr/megahp/manager/upload/menu/20250430132004_1745986804684_hSqJ_eqiay.jpg',
+        type: 'ICE',
+      }
+    ];
+
+    const container = document.getElementById('menu');
+    drinks.forEach(drink => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <img src="${drink.imageUrl}" alt="${drink.name}" />
+        <div class="card-content">
+          <h3 class="card-title">${drink.name}</h3>
+          <p class="card-desc">${drink.description}</p>
+          <span class="card-type">${drink.type}</span>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+
+    const dropBtn = document.querySelector('.dropbtn');
+    const dropdown = document.querySelector('.dropdown-content');
+
+    dropBtn.addEventListener('click', () => {
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // 다른 곳 클릭 시 닫기
+    window.addEventListener('click', (e) => {
+      if (!e.target.matches('.dropbtn')) {
+        dropdown.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
