@@ -33,7 +33,7 @@ Spring은 Bean을 생성하고 필요한 의존성을 주입한 뒤, 초기화 �
     1. starter dependencies
         - 각 기능별 미리 정의된 starter 제공(ex. web, jpa, security)
     2. auto configuration
-        - @SpringApplication을 통해 자동 설정 활성화
+        - @SpringBootApplication을 통해 자동 설정 활성화
         - ClassPath에 있는 라이브러리를 보고 자동 설정(웹은 Tomcat을, JPA는 EntityManager를 구성)
         - application.yml(또는 properties를 통해 세부 설정 가능)
     3. embeded server
