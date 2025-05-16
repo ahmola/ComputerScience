@@ -45,8 +45,6 @@ run()은 작업을 정의하고, start()로 스레드를 시작함(run은 절대
 
 더 유연하고, 다중 상속 시에 문제가 없음
 
-Executor도 많이 사용함
-
 ## Lifecycle
 
     NEW → RUNNABLE → RUNNING → (BLOCKED / WAITING / TIMED_WAITING) → TERMINATED
