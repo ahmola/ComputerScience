@@ -25,13 +25,13 @@ Spring Boot 애플리케이션의 상태를 모니터링하고 관리할 수 있
 ## application.yml
 
     management:
-    endpoints:
-        web:
-        exposure:
-            include: "*"
-    endpoint:
-        health:
-        show-details: always
+        endpoints:
+            web:
+            exposure:
+                include: "*"
+        endpoint:
+            health:
+            show-details: always
 
 ## 고려사항
 
