@@ -31,7 +31,7 @@
 
 ---
 
-## 1부. 컴퓨터 공학 기반 (하드웨어 → 인프라, 바텀업)
+## [1부. 컴퓨터 공학 기반 (하드웨어 → 인프라, 바텀업)](https://github.com/ahmola/ComputerScience/blob/main/ComputerSceinece.md)
 
 1. 컴퓨터 구조
 2. 운영체제 (리눅스)
