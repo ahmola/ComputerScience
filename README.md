@@ -20,7 +20,7 @@
 
 ---
 
-## 0부. 기획 — 가볍게 (무엇을 왜 만드는가)
+## [0부. 기획 — 가볍게 (무엇을 왜 만드는가)](https://github.com/ahmola/ComputerScience/blob/main/Planning.md)
 
 1. 요구사항 분석 기초
    - 요구사항 정의, 우선순위화 개념
