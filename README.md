@@ -47,7 +47,7 @@
 
 ---
 
-## 2부. 소프트웨어 설계·개발 역량 (본체)
+## [2부. 소프트웨어 설계·개발 역량 (본체)](https://github.com/ahmola/ComputerScience/blob/main/SoftwareDesign.md)
 
 1. 알고리즘/자료구조
    - 1부 → 2부를 잇는 사고 도구로 앞단에 배치
