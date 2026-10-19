@@ -71,7 +71,7 @@
 
 ---
 
-## 3부. 운영 — 가볍게 (배포 이후의 삶)
+## [3부. 운영 — 가볍게 (배포 이후의 삶)](https://github.com/ahmola/ComputerScience/blob/main/Maintainence.md)
 
 1. SRE 기초
    - 온콜, 인시던트 대응 개념
