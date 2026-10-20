@@ -83,7 +83,7 @@
 
 ## [번외: 건축공학과 소프트웨어공학](https://github.com/ahmola/ComputerScience/blob/main/%EA%B1%B4%EC%B6%95%EA%B3%B5%ED%95%99%EA%B3%BC%20%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EA%B3%B5%ED%95%99.md)
 
-## [소프트웨어의 역사]()
+## [소프트웨어의 역사](https://github.com/ahmola/ComputerScience/blob/main/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EC%9D%98%20%EC%97%AD%EC%82%AC.md)
 
 ## 작성 의도
 
